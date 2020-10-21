@@ -1,0 +1,43 @@
+﻿@model Mono.Models.VehicleModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VehicleModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleMake.makeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicleMake.makeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.modelName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.modelName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.modelAbrv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.modelAbrv)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.modelId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
